@@ -1,171 +1,166 @@
 # delivery_logistics_data_analysis
 # Project Overview
 
-This project analyzes delivery logistics data to evaluate delivery cost, delivery performance, delivery failures, delivery partners, distance, weather conditions, vehicle types, and package types.
+This project analyzes delivery logistics data to understand delivery performance, delivery costs, failure rates, and operational trends.
 
-The project follows a practical data analysis workflow using Excel and MySQL, starting with data preparation and moving toward business-focused analysis and insights.
+The analysis was performed using SQL, Microsoft Excel, and Power BI to identify useful business insights and present them through data visualizations and an interactive dashboard.
 
-# Business Objective
+🎯 Project Objectives
 
-The objective of this project is to understand delivery operations and answer key business questions such as:
+* Analyze overall delivery performance
+* Identify delivery cost patterns
+* Compare delivery partners and delivery modes
+* Analyze delivery failures and failure rates
+* Understand the impact of weather and vehicle type on delivery performance
+* Explore the relationship between delivery distance and delivery cost
+* Build an interactive Power BI dashboard for business reporting
 
-* Which delivery partners have higher delivery costs or failure rates?
-* Does delivery distance affect delivery cost?
-* Does weather impact delivery performance?
-* Which delivery modes and vehicle types show different performance patterns?
-* Which delivery partners handle the highest number of deliveries?
-* Which package types have better delivery performance?
+# Dataset
 
-⸻
-# Data Preparation & Cleaning
+The dataset contains delivery-level information including:
 
-Before performing the analysis, the dataset was reviewed and prepared for analysis.
-
-The data preparation process included:
-
-* Reviewing the dataset structure and available fields
-* Checking data types and ensuring fields were suitable for analysis
-* Reviewing missing or inconsistent values
-* Standardizing categorical values where required
-* Checking numerical fields such as distance, package weight, delivery time, expected time, rating, and delivery cost
-* Preparing the dataset for Pivot Table analysis in Excel
-* Preparing the dataset for querying in MySQL
-
-# The cleaned/prepared data was then used for both Excel and SQL analysis.
-
-⸻
+* Delivery ID
+* Delivery Partner
+* Package Type
+* Vehicle Type
+* Delivery Mode
+* Weather Condition
+* Distance Kilometer
+* Package Weight
+* Delivery Time Hours
+* Expected Time Hours
+* Delayed Status
+* Delivery Rating
+* Delivery Cost
+* Delivery Status
 
 # Tools & Technologies
 
-Tool	Purpose
-Excel	Data analysis, Pivot Tables & Charts
-MySQL	SQL-based business analysis
-⸻
-# Excel Analysis
-
-Excel was used to perform exploratory and comparative analysis using Pivot Tables, Scatter Charts, and Column Charts.
-
-1. Delivery Distance vs Delivery Cost
-
-Question: Does delivery distance affect delivery cost?
-
-A Scatter Chart was used to examine the relationship between delivery distance and delivery cost.
-
-2. Average Delivery Cost by Delivery Partner
-
-Question: Which delivery partner has the highest average delivery cost?
-
-A Pivot Table was used to compare average delivery costs across delivery partners.
-
-3. Delivery Failure Rate by Delivery Partner
-
-Question: Which delivery partner has the highest delivery failure rate?
-
-A Pivot Table was used to compare failure rates across delivery partners.
-
-4. Top 5 Delivery Partners by Number of Deliveries
-
-Question: Which are the top five delivery partners by number of deliveries?
-
-A Pivot Table was used to identify the delivery partners handling the highest number of deliveries.
-
-5. Weather vs Delivery Performance
-
-Question: Does weather affect delivery performance?
-
-A Pivot Table and Column Chart were used to compare delivery performance across different weather conditions.
-
-⸻
+# SQL — Data analysis and business queries
+# Microsoft Excel — Pivot tables, charts, and exploratory analysis
+# Power BI — Interactive dashboard and data visualization
+# GitHub — Project documentation and portfolio
 
 # SQL Analysis
 
-MySQL was used to perform deeper business-oriented analysis using SQL concepts such as:
+SQL was used to analyze delivery performance, cost, partners, vehicles, and failure patterns.
 
-* Aggregate functions
-* GROUP BY
-* HAVING
-* CASE
-* Subqueries
-* Conditional calculations
-* Comparison with overall averages/rates
-* Ranking and filtering
+Key business questions included:
 
-Business Questions Analysed
+* Which delivery partner has the highest average delivery cost?
+* Which delivery partner has the highest on-time delivery rate?
+* Which delivery mode has the highest average delivery cost?
+* Which delivery partner has the highest failure rate?
+* Does delivery distance affect delivery cost?
+* Which delivery partners have the highest delivery volume?
+* Which vehicle type has the most failed deliveries?
+* Which partners have a failure rate higher than the overall failure rate?
 
-1. Which delivery partner has the highest average delivery cost?
-2. Which delivery partner has the highest on-time delivery rate?
-3. Which delivery mode has the highest average delivery cost?
-4. Which delivery partner has the highest delivery failure rate?
-5. Does longer delivery distance lead to higher delivery cost?
-6. How many deliveries were successful and how many failed?
-7. Which are the top five delivery partners by number of deliveries?
-8. Which vehicle type has the highest number of delivery failures?
-9. Which delivery partners have a failure rate higher than the overall failure rate?
-10. Which delivery partners have both a high failure rate and high average delivery cost?
-11. Which delivery partners perform above the overall average on-time delivery rate?
-12. Which package type has the highest average delivery rate?
+SQL queries and outputs are available in the SQL Analysis folder.
 
-The SQL Analysis folder contains screenshots showing the queries and their corresponding outputs.
+# Excel Analysis
 
-The complete SQL queries are also provided in:
+Excel was used for exploratory analysis and visual reporting.
 
-query of Delivery_Logistics.sql
+Key analyses included:
 
-⸻
+* Average delivery cost by delivery partner
+* Delivery partner failure rate
+* Top 5 delivery partners by delivery volume
+* Failed deliveries by vehicle type
+* Distance vs delivery cost
+* Delivery performance analysis
 
-# Business Insights
+Charts and analysis outputs are available in the Excel Analysis folder.
 
-The analysis was designed to identify operational patterns related to:
+📊 Power BI Dashboard
 
-# Cost
+An interactive Power BI dashboard was created with three pages:
 
-* Variation in average delivery cost across delivery partners
-* Relationship between delivery distance and delivery cost
-* Differences in cost across delivery modes
+1. Delivery Analysis
 
-# Delivery Partner Performance
+Key metrics and visuals include:
 
-* Delivery partners with higher delivery volumes
+* Total Deliveries
+* Total Delivery Cost
+* Average Delivery Cost
+* Average Delivery Rating
+* Delivered vs Failed Deliveries
+* Deliveries by Vehicle Type
+* Deliveries by Delivery Partner
+* Filters for Vehicle Type, Weather Condition, and Delivery Partner
+
+2. Cost Analysis
+
+This page focuses on delivery cost patterns.
+
+Visuals include:
+
+* Average Delivery Cost by Delivery Partner
+* Distance vs Delivery Cost
+* Average Delivery Cost by Package Type
+* Average Delivery Cost by Delivery Mode
+* Filters for Package Type, Delivery Partner, Vehicle Type, and Delivery Mode
+
+3. Performance Analysis
+
+This page focuses on delivery failures and operational performance.
+
+Visuals include:
+
+* Failed Deliveries
+* Failed Deliveries by Vehicle Type
+* Failure Rate by Delivery Partner
+* Weather vs Delivery Performance
+
+💡 Key Business Insights
+
+The analysis helps identify:
+
+* Differences in delivery costs across partners and delivery modes
 * Delivery partners with higher failure rates
-* Delivery partners performing above the overall on-time delivery benchmark
-* Delivery partners showing both higher failure rates and higher average costs
+* Vehicle types associated with failed deliveries
+* The relationship between delivery distance and delivery cost
+* Delivery performance under different weather conditions
+* High-volume delivery partners and their operational performance
 
-# Operational Conditions
-
-* Relationship between weather conditions and delivery performance
-* Delivery failures across different vehicle types
-
-# Package Performance
-
-* Comparison of delivery performance across package types
-
-These findings can support delivery performance monitoring, cost optimization, and operational decision-making.
-
-⸻
-
-# Project Structure
+📁 Project Structure
 
 Delivery Logistics Data Analysis
 │
 ├── Excel Analysis
-│   └── Excel analysis screenshots
+│   ├── Pivot Tables
+│   └── Excel Charts
 │
 ├── SQL Analysis
-│   └── SQL query + output screenshots
+│   ├── SQL Queries
+│   └── Query Outputs
 │
-├── query of Delivery_Logistics.sql
-│   └── Complete SQL queries
+├── Power BI Dashboard
+│   ├── Delivery_Logistics_Dashboard.pbix
+│   └── Dashboard Screenshots
+│       ├── Page 1 - Delivery Analysis.png
+│       ├── Page 2 - Cost Analysis.png
+│       └── Page 3 - Performance Analysis.png
 │
+├── QD of Delivery Logistics.SQL
 └── README.md
 
-⸻
+🔎 Skills Demonstrated
 
-# Skills Demonstrated
+* SQL Data Analysis
+* Data Cleaning
+* Data Aggregation
+* Business Analysis
+* Exploratory Data Analysis
+* Excel Pivot Tables
+* Data Visualization
+* Power BI Dashboard Development
+* KPI Reporting
+* Business Insight Generation
 
-Data Analysis | Excel | Pivot Tables | Data Visualization | MySQL | SQL | Business Analysis | KPI Analysis | Data Cleaning | GitHub
+👩‍💻 Author
 
-⸻
+Pallavi Sharma
 
-# Conclusion
-
-This project demonstrates an end-to-end approach to analyzing logistics data using Excel and SQL, from data preparation and exploratory analysis to business-focused questions and operational insights.
+Data Analyst
